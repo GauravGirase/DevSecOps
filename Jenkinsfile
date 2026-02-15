@@ -52,7 +52,7 @@ pipeline{
             when { expression { params.action == 'create'}}    
 
             steps{
-                checoutGit(params.gitUrl, params.gitBranch)
+                gitcheckout(params.gitUrl, params.gitBranch)
             }
         }
         stage('gitleak'){
