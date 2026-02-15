@@ -9,22 +9,22 @@ pipeline{
     parameters {
         choice(name: 'action', choices: 'create\ndelete', description: 'Select action to perform (create/delete).')
         
-        string(name: 'gitUrl', defaultValue: 'https://github.com/harishnshetty/3-tier-jenkins-shared-libraries-devsecops-project.git', description: 'Git URL')
+        string(name: 'gitUrl', defaultValue: 'https://github.com/GauravGirase/DevSecOps.git', description: 'Git URL')
         string(name: 'gitBranch', defaultValue: 'frontend', description: 'Git Branch')
 
         string(name: 'projectName', defaultValue: 'frontend', description: 'Project Name')
         string(name: 'projectKey', defaultValue: 'frontend', description: 'Project Key')
 
-        string(name: 'dockerHubUsername', defaultValue: 'harishnshetty', description: 'Docker Hub Username')
+        string(name: 'dockerHubUsername', defaultValue: 'gauravgirase', description: 'Docker Hub Username')
         string(name: 'dockerImageName', defaultValue: 'frontend-signed', description: 'Docker Image Name')
 
-        string(name: 'gitUserConfigName', defaultValue: 'harishn', description: 'Git User Name')
-        string(name: 'gitUserConfigEmail', defaultValue: 'harishn662@gmail.com', description: 'Git User Email')
-        string(name: 'gitUserName', defaultValue: 'harishnshetty', description: 'Git User Name')
+        string(name: 'gitUserConfigName', defaultValue: 'gauravgirase', description: 'Git User Name')
+        string(name: 'gitUserConfigEmail', defaultValue: 'gauravgirase1996@gmail.com', description: 'Git User Email')
+        string(name: 'gitUserName', defaultValue: 'gauravgirase', description: 'Git User Name')
         string(name: 'gitPassword', defaultValue: 'github-token', description: 'Git Password')
 
-        string(name: 'slackChannel', defaultValue: '#jenkins-shared-devsecops', description: 'Slack Channel')
-        string(name: 'emailAddress', defaultValue: 'harishn662@gmail.com', description: 'Email Address')
+        string(name: 'slackChannel', defaultValue: '#devopswarrior', description: 'Slack Channel')
+        string(name: 'emailAddress', defaultValue: 'gauravgirase1996@gmail.com', description: 'Email Address')
     }
 
     tools{
@@ -52,7 +52,7 @@ pipeline{
             when { expression { params.action == 'create'}}    
 
             steps{
-                checkoutGit(params.gitUrl, params.gitBranch)
+                checoutGit(params.gitUrl, params.gitBranch)
             }
         }
         stage('gitleak'){
