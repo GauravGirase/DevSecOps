@@ -82,7 +82,7 @@ resource "aws_security_group" "jenkins_sg" {
 resource "aws_subnet" "public-subnet" {
     vpc_id = aws_vpc.devseops_vpc.id
     availability_zone = "ap-south-1a"
-    cidr_block = "10.0.1.0/24"
+    cidr_block = "10.0.0.0/25"
 
     tags = {
       Name = "public-subnet"
@@ -93,7 +93,7 @@ resource "aws_subnet" "public-subnet" {
 resource "aws_subnet" "private-subnet" {
     vpc_id = aws_vpc.devseops_vpc.id
     availability_zone = "ap-south-1b"
-    cidr_block = "10.0.2.0/24"
+    cidr_block = "10.0.0.128/25"
 
     tags = {
       Name = "private-subnet"
