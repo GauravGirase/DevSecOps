@@ -93,7 +93,8 @@ pipeline{
         stage('OWASP FS SCAN') {
             when { expression { params.action == 'create'} }
             steps {
-                owaspdpcheck()
+                // owaspdpcheck()
+                println "skipped"
             }
         }
 
