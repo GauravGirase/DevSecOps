@@ -58,7 +58,7 @@ pipeline{
         stage('gitleak'){
             when { expression { params.action == 'create'}}    
             steps{
-                gitleak()
+                gitLeak()
             }
         }
         stage('sonarqube Analysis'){
