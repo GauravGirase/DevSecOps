@@ -36,7 +36,7 @@ pipeline{
         CONTAINER_PORT = 80
         EXPOSE_PORT = 80
         BRANCH = 'deployment'
-        MANIFESTFILENAME = '05-three-tier-app/11-frontend-blue.yml'
+        MANIFESTFILENAME = 'deployment/frontend.yml'
         sonarServer = 'sonar-server'
         sonarqubeCredentialsId = 'sonar-token'
 
