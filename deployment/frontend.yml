@@ -24,7 +24,7 @@ spec:
         fsGroup: 101
       containers:
         - name: frontend-blue
-          image: gauravgirase/frontend-signed:1
+          image: gauravgirase/frontend-signed:20
           imagePullPolicy: IfNotPresent
           securityContext:
             allowPrivilegeEscalation: false
