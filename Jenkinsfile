@@ -71,7 +71,7 @@ pipeline{
         stage('sonarqube QualitGate'){
         when { expression { params.action == 'create'}}    
             steps{
-                sonarqubequalitygate(sonarqubeCredentialsId)
+                sonarqubequalitygate()
                 }
             }
         
