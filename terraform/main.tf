@@ -170,7 +170,7 @@ resource "aws_route_table_association" "private_route_table_association" {
 
 data "aws_ami" "ubuntu" {
     most_recent = true
-    owners = ["229704422334"]
+    owners = ["099720109477"] # Canonical’s official AWS publisher account for Ubuntu images.
 
     filter {
       name = "name"
